@@ -1,0 +1,15 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "1on2-reserve",
+	"main": "src/worker/index.ts",
+	"compatibility_date": "2026-10-01",
+	"compatibility_flags": ["nodejs_compat"],
+	"assets": {
+		// SPA のルーティング（/calendar など）はすべて index.html を返し、/api/* だけ Worker に渡す
+		"not_found_handling": "single-page-application",
+		"run_worker_first": ["/api/*"]
+	},
+	"observability": {
+		"enabled": true
+	}
+}
