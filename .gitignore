@@ -1,6 +1,8 @@
 node_modules/
 dist/
 .wrangler/
+docs/
+*.dbdiagram
 
 # 秘密情報
 .env
